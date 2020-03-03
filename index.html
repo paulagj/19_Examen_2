@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="css/bootstrap.css"  type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans|Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    
+    <title>Tolk</title>
+    <style type="text/css">
+        :root{
+            --groc:#EFCB56;
+            --verd:#535851;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            font-weight: 700;
+            position: fixed;
+            padding-left: 2em;
+            padding-top: 1em;
+        }
+        a{
+            color: black;
+            font-family: 'Open Sans';
+            font-size: 12px;
+            padding-right: 2em;
+            padding-left: 2em;
+        }
+        .logo{
+            padding-left: 25%;
+        }
+        .lupa{
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 7em;
+            width: 100%;
+            position: fixed;
+        }
+        img{
+            width: 100%;
+        }
+        .container{
+            display: grid;
+            grid-template: repeat(10, 90px) / repeat(4, 3fr);
+        }
+        h1{
+            font-size: 34px;
+            font-family: 'Playfair Display';
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        h2{
+            font-family: 'Open Sans';
+            font-size: 12px;
+            padding-top: 2em;
+        }
+        h3{
+            font-size: 30px;
+            font-family: 'Playfair Display';
+            padding-bottom: 1em;
+        }
+        h4{
+            font-size: 20px;
+            padding-left: 14em;
+            padding-right: 14em;
+            font-family: 'Playfair Display';
+        }
+        h5{
+            text-align: center;
+            font-family: 'Open Sans';
+            font-size: 12px;
+            padding-top: 2em;
+        }
+        .item-1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 7;
+        }
+        .item-2{
+            text-align: center;
+            padding-top: 25%;
+            padding-left: 5em;
+            padding-right: 5em;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 7;
+        }
+        .item-3{
+            background: var(--groc);
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 7;
+            grid-row-end: 11;
+            text-align: center;
+            padding-top: 5em;
+        }
+        .item-4{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 11;
+            grid-row-end: 13;
+        }
+        .item-5{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 11;
+            grid-row-end: 13;
+        }
+        .item-6{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 11;
+            grid-row-end: 13;
+        }
+        .item-7{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 13;
+            grid-row-end: 15;
+        }
+        .item-8{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 13;
+            grid-row-end: 15;
+        }
+        .item-9{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 13;
+            grid-row-end: 15;
+        }
+        footer{
+            padding: 2em 3em;
+            background: var(--verd);
+            display: grid;
+            grid-template: repeat(4, 90px) / repeat(4, 3fr);
+            font-family: 'Open Sans';
+        }
+        .col-1{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .col-2{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .col-3{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .col-4{
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .col-5{
+            align-items: flex-start;
+            padding-top: 22em;
+            color: white;
+            font-size: 10px;
+        }
+        h6{
+            color: grey;
+            font-size: 15px;
+        }
+        p{
+            color: white;
+            font-size: 12px;
+            padding-top: 1em;
+        }
+        footer{
+            padding-left: 7em;
+            padding-top: 5em;
+        }
+        @media (max-width:600px){
+            nav{
+                justify-content: center;
+                font-size: 2.2em;
+                height: 70px;
+            }
+            container{
+                position: relative;
+                width: 100%;
+                font-size: 2em;
+                padding: 80px 20px 0 40px;
+            }
+            main{
+                grid-template: repeat(1,1fr)/repeat(1,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       <div class="navigation">
+        <a href="#">Products</a>
+        <a href="#">Stockists</a>
+        <a href="#">About us</a>
+        </div>
+        <div class="logo">
+            <img src="img/logo/logo.png">
+        </div>
+        <div class="lupa"><i class="fas fa-search"></i></div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="item-1">
+                <div class="caixa-img">
+                    <img src="img/baixa.jpeg" alt="">
+                </div>
+            </div>
+            <div class="item-2">
+                <h1>Lift the blind to let in the light. A moment of calm before the day begins.</h1>
+                <h2>Featuring Cherry sofa and Kile coffee table</h2>
+            </div>
+            <div class="item-3">
+                <h3>Time for Living</h3>
+                <h4>Take time for life’s little moments. Browsing the news as you eat breakfast. Setting the table for hungry guests. Sinking in to your favourite armchair. At Tolv, your daily rituals are at the heart of our design. We make furniture to give you your best day, every day.</h4>
+                <h5>Find out more About us</h5>
+            </div>
+            <div class="item-4">
+                <div class="caixa-img">
+                    <img src="img/baixa%20(1).jpeg" alt="">
+                </div>
+            </div>
+            <div class="item-5">
+                <div class="caixa-img">
+                    <img src="img/baixa%20(2).jpeg" alt="">
+                </div>
+            </div>
+            <div class="item-6">
+                <div class="caixa-img">
+                    <img src="img/baixa%20(3).jpeg" alt="">
+                </div>
+            </div>
+            <div class="item-7">
+                <div class="caixa-img">
+                    <img src="img/baixa%20(4).jpeg" alt="">
+                </div>
+            </div>
+            <div class="item-8">
+                <div class="caixa-img">
+                    <img src="img/baixa%20(5).jpeg" alt="">
+                </div>
+            </div>
+            <div class="item-9">
+                <div class="caixa-img">
+                    <img src="img/baixa%20(6).jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="col-1">
+            <h6>Products</h6>
+            <p>Lounge Chairs</p>
+            <p>Sofas</p>
+            <p>Daybeds</p>
+            <p>Poufs</p>
+            <p>Dining Chairs</p>
+            <p>Stools</p>
+            <p>Tables & Desks</p>
+            <p>Storage</p>
+        </div>
+        <div class="col-2">
+            <h6>Useful information:</h6>
+            <p>Our stockists</p>
+            <p>Our designers</p>
+            <p>Product care</p>
+        </div>
+        <div class="col-3">
+            <h6>Company:</h6>
+            <p>News</p>
+            <p>About us</p>
+            <p>Contact us</p>
+        </div>
+        <div class="col-4">
+            <h6>Connect with us:</h6>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <h6>Access to:</h6>
+            <p>Client login</p>
+        </div>
+        <div class="col-5">
+            <h7>All rights reserved Tolv © 2020</h7>
+        </div> 
+    </footer>
+        
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
